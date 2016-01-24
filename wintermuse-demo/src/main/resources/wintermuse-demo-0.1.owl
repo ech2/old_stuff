@@ -1,0 +1,185 @@
+@prefix : <http://wintermuse.net/ontology/demo/0.1#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://wintermuse.net/ontology/demo/0.1> .
+
+<http://wintermuse.net/ontology/demo/0.1> rdf:type owl:Ontology .
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://wintermuse.net/ontology/demo/0.1#hasNeighbor
+
+:hasNeighbor rdf:type owl:ObjectProperty ;
+             
+             rdfs:range [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasNeighbor ;
+                          owl:someValuesFrom :NodeID
+                        ] .
+
+
+
+###  http://wintermuse.net/ontology/demo/0.1#hasNodeState
+
+:hasNodeState rdf:type owl:ObjectProperty ;
+              
+              rdfs:range :NodeState .
+
+
+
+###  http://wintermuse.net/ontology/demo/0.1#hasSynthState
+
+:hasSynthState rdf:type owl:ObjectProperty ;
+               
+               rdfs:domain :NodeState ;
+               
+               rdfs:range :SynthState .
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://wintermuse.net/ontology/demo/0.1#hasBasePitch
+
+:hasBasePitch rdf:type owl:DatatypeProperty ;
+              
+              rdfs:domain :SynthState ;
+              
+              rdfs:subPropertyOf :hasNormalizedSynthParameter ;
+              
+              rdfs:range xsd:float .
+
+
+
+###  http://wintermuse.net/ontology/demo/0.1#hasDensity
+
+:hasDensity rdf:type owl:DatatypeProperty ;
+            
+            rdfs:domain :SynthState ;
+            
+            rdfs:subPropertyOf :hasNormalizedSynthParameter ;
+            
+            rdfs:range xsd:float .
+
+
+
+###  http://wintermuse.net/ontology/demo/0.1#hasFreqModCoef
+
+:hasFreqModCoef rdf:type owl:DatatypeProperty ;
+                
+                rdfs:domain :SynthState ;
+                
+                rdfs:subPropertyOf :hasNormalizedSynthParameter ;
+                
+                rdfs:range xsd:float .
+
+
+
+###  http://wintermuse.net/ontology/demo/0.1#hasIPAddress
+
+:hasIPAddress rdf:type owl:DatatypeProperty ;
+              
+              rdfs:range xsd:string .
+
+
+
+###  http://wintermuse.net/ontology/demo/0.1#hasNormalizedSynthParameter
+
+:hasNormalizedSynthParameter rdf:type owl:DatatypeProperty ;
+                             
+                             rdfs:domain :SynthState ;
+                             
+                             rdfs:range xsd:float .
+
+
+
+###  http://wintermuse.net/ontology/demo/0.1#hasReliabilityFactor
+
+:hasReliabilityFactor rdf:type owl:DatatypeProperty ;
+                      
+                      rdfs:domain :NodeState ;
+                      
+                      rdfs:range xsd:float .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://wintermuse.net/ontology/demo/0.1#NodeID
+
+:NodeID rdf:type owl:Class ;
+        
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasNodeState ;
+                          owl:someValuesFrom :NodeState
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasIPAddress ;
+                          owl:allValuesFrom xsd:string
+                        ] .
+
+
+
+###  http://wintermuse.net/ontology/demo/0.1#NodeState
+
+:NodeState rdf:type owl:Class ;
+           
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasNeighbor ;
+                             owl:someValuesFrom :NodeID
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasReliabilityFactor ;
+                             owl:allValuesFrom xsd:float
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasSynthState ;
+                             owl:someValuesFrom :SynthState
+                           ] .
+
+
+
+###  http://wintermuse.net/ontology/demo/0.1#SynthState
+
+:SynthState rdf:type owl:Class ;
+            
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasDensity ;
+                              owl:someValuesFrom xsd:float
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasBasePitch ;
+                              owl:someValuesFrom xsd:float
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasFreqModCoef ;
+                              owl:someValuesFrom xsd:float
+                            ] .
+
+
+
+
+###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
+

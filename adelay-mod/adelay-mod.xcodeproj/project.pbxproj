@@ -1,0 +1,264 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C0E60DD71AD5448300B720CB /* audioeffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0E60DD21AD5448300B720CB /* audioeffect.cpp */; };
+		C0E60DD81AD5448300B720CB /* audioeffectx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0E60DD41AD5448300B720CB /* audioeffectx.cpp */; };
+		C0E60DD91AD5448300B720CB /* vstplugmain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0E60DD61AD5448300B720CB /* vstplugmain.cpp */; };
+		F4476991093DAEA1008998C4 /* adelay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F447698F093DAEA1008998C4 /* adelay.cpp */; };
+		F4476A76093DCD05008998C4 /* adelaymain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4476A75093DCD05008998C4 /* adelaymain.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		08EA7FFBFE8413EDC02AAC07 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		C0E60DD11AD5448300B720CB /* aeffeditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aeffeditor.h; sourceTree = "<group>"; };
+		C0E60DD21AD5448300B720CB /* audioeffect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = audioeffect.cpp; sourceTree = "<group>"; };
+		C0E60DD31AD5448300B720CB /* audioeffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = audioeffect.h; sourceTree = "<group>"; };
+		C0E60DD41AD5448300B720CB /* audioeffectx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = audioeffectx.cpp; sourceTree = "<group>"; };
+		C0E60DD51AD5448300B720CB /* audioeffectx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = audioeffectx.h; sourceTree = "<group>"; };
+		C0E60DD61AD5448300B720CB /* vstplugmain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vstplugmain.cpp; sourceTree = "<group>"; };
+		F4476974093DAE42008998C4 /* adelay.vst */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = adelay.vst; sourceTree = BUILT_PRODUCTS_DIR; };
+		F447698F093DAEA1008998C4 /* adelay.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = adelay.cpp; path = adelay/source/adelay.cpp; sourceTree = SOURCE_ROOT; };
+		F4476990093DAEA1008998C4 /* adelay.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = adelay.h; path = adelay/source/adelay.h; sourceTree = SOURCE_ROOT; };
+		F4476A75093DCD05008998C4 /* adelaymain.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = adelaymain.cpp; path = adelay/source/adelaymain.cpp; sourceTree = SOURCE_ROOT; };
+		F4476B78093DD675008998C4 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
+		F4FF51E50929FB0400DDED7A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F4476970093DAE42008998C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* vst 2.4 examples */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77ADFE841716C02AAC07 /* Source */,
+				089C1671FE841209C02AAC07 /* Frameworks */,
+				19C28FB4FE9D528D11CA2CBB /* Products */,
+				C0E60DD01AD5448300B720CB /* vst2.x */,
+			);
+			name = "vst 2.4 examples";
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4476B78093DD675008998C4 /* QuickTime.framework */,
+				08EA7FFBFE8413EDC02AAC07 /* Carbon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08FB77ADFE841716C02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F4FF51E50929FB0400DDED7A /* Info.plist */,
+				F4476968093DAE36008998C4 /* adelay */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		19C28FB4FE9D528D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4476974093DAE42008998C4 /* adelay.vst */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C0E60DD01AD5448300B720CB /* vst2.x */ = {
+			isa = PBXGroup;
+			children = (
+				C0E60DD11AD5448300B720CB /* aeffeditor.h */,
+				C0E60DD21AD5448300B720CB /* audioeffect.cpp */,
+				C0E60DD31AD5448300B720CB /* audioeffect.h */,
+				C0E60DD41AD5448300B720CB /* audioeffectx.cpp */,
+				C0E60DD51AD5448300B720CB /* audioeffectx.h */,
+				C0E60DD61AD5448300B720CB /* vstplugmain.cpp */,
+			);
+			path = vst2.x;
+			sourceTree = "<group>";
+		};
+		DC657D1D14FF5102007951FA /* source */ = {
+			isa = PBXGroup;
+			children = (
+				F447698F093DAEA1008998C4 /* adelay.cpp */,
+				F4476990093DAEA1008998C4 /* adelay.h */,
+				F4476A75093DCD05008998C4 /* adelaymain.cpp */,
+			);
+			name = source;
+			sourceTree = "<group>";
+		};
+		F4476968093DAE36008998C4 /* adelay */ = {
+			isa = PBXGroup;
+			children = (
+				DC657D1D14FF5102007951FA /* source */,
+			);
+			name = adelay;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F4476969093DAE42008998C4 /* adelay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4476971093DAE42008998C4 /* Build configuration list for PBXNativeTarget "adelay" */;
+			buildPhases = (
+				F447696A093DAE42008998C4 /* Resources */,
+				F447696B093DAE42008998C4 /* Sources */,
+				F4476970093DAE42008998C4 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = adelay;
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = "vst 2.4 examples";
+			productReference = F4476974093DAE42008998C4 /* adelay.vst */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 4FADC23708B4156C00ABE55E /* Build configuration list for PBXProject "adelay-mod" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 089C166AFE841209C02AAC07 /* vst 2.4 examples */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F4476969093DAE42008998C4 /* adelay */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F447696A093DAE42008998C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F447696B093DAE42008998C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0E60DD81AD5448300B720CB /* audioeffectx.cpp in Sources */,
+				F4476991093DAEA1008998C4 /* adelay.cpp in Sources */,
+				C0E60DD71AD5448300B720CB /* audioeffect.cpp in Sources */,
+				C0E60DD91AD5448300B720CB /* vstplugmain.cpp in Sources */,
+				F4476A76093DCD05008998C4 /* adelaymain.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4FADC23808B4156C00ABE55E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_ALTIVEC_EXTENSIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = "/Users/oscii/Workspace/Dev/AudioDSP/Libs/VST3_SDK/**";
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_PREPROCESS = YES;
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = vst;
+			};
+			name = Debug;
+		};
+		4FADC23908B4156C00ABE55E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEPLOYMENT_POSTPROCESSING = YES;
+				GCC_ALTIVEC_EXTENSIONS = YES;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_UNROLL_LOOPS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = "/Users/oscii/Workspace/Dev/AudioDSP/Libs/VST3_SDK/**";
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_PREPROCESS = YES;
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = vst;
+			};
+			name = Release;
+		};
+		F4476972093DAE42008998C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = "/Users/oscii/Workspace/Dev/AudioDSP/Libs/VST3_SDK/**";
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = adelay;
+			};
+			name = Debug;
+		};
+		F4476973093DAE42008998C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				HEADER_SEARCH_PATHS = "/Users/oscii/Workspace/Dev/AudioDSP/Libs/VST3_SDK/**";
+				PRODUCT_NAME = adelay;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4FADC23708B4156C00ABE55E /* Build configuration list for PBXProject "adelay-mod" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FADC23808B4156C00ABE55E /* Debug */,
+				4FADC23908B4156C00ABE55E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4476971093DAE42008998C4 /* Build configuration list for PBXNativeTarget "adelay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4476972093DAE42008998C4 /* Debug */,
+				F4476973093DAE42008998C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}
